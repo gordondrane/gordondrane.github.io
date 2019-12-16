@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Gordon Drane, J.D. </title>
+<link rel="shortcut icon" href="images/tabImage.png"></link>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+header{
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+  text-align: center;
+}
+
+.navbar {
+	width: 100%;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 14px;
+  font-size: 13px;
+  width: 20%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+
+.tabcontent {
+  background-color: #aac4ff;
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+</style>
+</head>
+<body bgcolor="#e89c50">
+<div class="header">
+<center>
+<h1 style="font-family : 'Avenir Black'";> Gordon Drane, J.D. </h1> <p style="font-size:150%;">gordie.drane@gmail.com | 412-944-9085</p>
+</center>
+<div>
+<div id="navbar" class="navbar">
+	<button class="tablink" onclick="openPage('Home', this)" id="defaultOpen">Home</button>
+	<button class="tablink" onclick="openPage('Resume', this)">Resume</button>
+	<button class="tablink" onclick="openPage('Reference', this)">References</button>
+	<button class="tablink" onclick="openPage('Awards', this)">Awards</button>
+	<button class="tablink" onclick="openPage('Personal', this)">Personal</button>
+</div>
+<div id="Home" class="tabcontent">
+<img src="images/gordonDrane.jpg" style="max-width: 50%;">
+<h3>About Me</h3>
+<p style="font-size:150%;">
+<strong>Award-winning rare disease sales Leader</strong> with a consistent record of achieving top national results through recruiting and
+developing high performing teams that exhibit value, demonstrate accountability and deliver results.
+<br><br>
+<strong>Building Teams – </strong>Rebuilt multiple regional business units from lowest to highest performing teams through commitment to
+brand strategy, disease state excellence, customer value and superior account management. Coached individuals to realize
+optimal professional growth by recognizing varied levels of emotional intelligence, harnessing strengths and agreeing to mutual
+growth and self-improvement.
+<br><br>
+<strong>Leadership – </strong>Regional Sales Director for Vyera Pharmaceuticals LLC, winning Platinum Key for Outstanding Regional Sales
+Director (2018). Direct reports include: key account managers, strategic hospital managers and regional trainers promoting
+specialty product in virology, neurology, immunology, parasitology, retinal, oncology and other sub-specialties.
+<br><br>
+<strong>History of strong performance </strong>with health plans and payers across regional and national market channels including, institutional
+sales, IDNs, POs, GPOs, and Federal Healthcare systems (VA).
+<br><br>
+<strong>Access and Reimbursement – </strong>Demonstrates expertise in hospital contracting and gaining product access through commercial,
+340b, Medicaid, Medicare and government payers. Expert in Specialty Pharmacy/HUB navigation and state ADAPs.
+<br><br>
+<strong>Collaboration – </strong>Champions partnerships across multiple internal business units and external partners. Achieves collaborative
+approach through leadership, education, marketing, patient advocacy and training. Committed to integrating corporate culture
+through all aspects of hiring and coaching.
+</p>
+</div>
+
+<div id="Resume" class="tabcontent">
+  <h3>Resume</h3>
+  <center>
+	<iframe src="DraneResume.pdf" width="500" height="700"> </iframe>
+  </center>
+</div>
+
+<div id="Reference" class="tabcontent">
+  <h3>References</h3>
+  <center>
+  <table>
+  <center>
+	<tr>
+  <h3>Meryl Naisby</h3> <p> Gallup Certified CliftonStrengths Coach, Gallup </p>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/OFF4gT7dXEg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </tr>
+  <tr>
+  <th>
+  <h3>Dr. Gurkamal Chatta, MD</h3> <p> Chief, GU Oncology, Roswell Park </p>
+  <iframe src="LOR/Gordon_RECC.pdf" width="500" height="700"> </iframe>
+  </th>
+  <th>
+  <h3>Dr. Emanuel N. Vergis, MD, MPH</h3> <p> Medical Director, One Medical </p>
+  <iframe src="LOR/WGD_LOR.pdf" width="500" height="700"> </iframe>
+  </th>
+  </tr>
+  </center>
+  </table>
+   </center>
+</div>
+
+<div id="Awards" class="tabcontent">
+  <h3>Awards</h3>
+  <h4>Vyera Regional Sales Director Award</h4>
+  <img src="images/vyeraAward.jpg" style="max-width: 25%;">
+</div>
+
+
+<div id="Personal" class="tabcontent">
+  <h3>Personal</h3>
+  
+</div>
+
+
+<script>
+function openPage(pageName,elmnt) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = "#333";
+  
+}
+document.getElementById("defaultOpen").click();
+window.onscroll = function() {myFunction()};
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+<footer>
+	<address>
+				Gordie Drane<br>
+				182 Manchester Circle<br>
+				Pittsburgh, PA 15237
+				</address>
+</footer>
+   
+</body>
+</html> 
